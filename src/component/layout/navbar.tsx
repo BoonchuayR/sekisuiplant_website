@@ -51,6 +51,9 @@ const Navbar: React.FC = () => {
               <Link href={buildHref('/contact')} className={`${isActive('/contact') ? 'text-mainBlue' : 'text-gray-500'} hover:text-mainBlue`}>{t("contact")}</Link>
             </li>
             <li>
+              <Link href={buildHref('/product-service')} className={`${isActive('/product-service') ? 'text-mainBlue' : 'text-gray-500'} hover:text-mainBlue`}>{t("product-service")}</Link>
+            </li>
+            <li>
               <Link href={buildHref('/blog')} className={`${isActive('/blog') ? 'text-mainBlue' : 'text-gray-500'} hover:text-mainBlue`}>{t("blog")}</Link>
             </li>
           </ul>
@@ -86,6 +89,11 @@ const Navbar: React.FC = () => {
           <li>
             <Link href={buildHref('/contact')} className={`block py-2 rounded-md text-base font-medium ${isActive('/contact') ? 'text-mainBlue font-semibold' : 'text-gray-500'} hover:text-mainBlue`} onClick={() => setOpen(false)}>
               {t("contact")}
+            </Link>
+          </li>
+          <li>
+            <Link href={buildHref('/product-service')} className={`block py-2 rounded-md text-base font-medium ${isActive('/product-service') ? 'text-mainBlue font-semibold' : 'text-gray-500'} hover:text-mainBlue`} onClick={() => setOpen(false)}>
+              {t("product-service")}
             </Link>
           </li>
           <li>
