@@ -1,0 +1,77 @@
+{
+  "hero": {
+    "backed": "積水化学グループの技術と経験によるサポート",
+    "titleLine1": "産業プラント",
+    "titleLine2": "エンジニアリング",
+    "subtitle": "現代の製造プラント向けのエンジニアリングソリューション",
+    "contact": "お問い合わせ"
+  },
+  "service": {
+    "button": "サービス",
+    "heading": "誰も自ら苦痛を好む者はいないが、翻訳のためのサンプル文です。",
+    "card": {
+      "title": "グローバルリーチ",
+      "desc": "私たちは世界中にサービスを提供し、品質と信頼性を確保します。"
+    }
+  },
+  "navbar": {
+    "companyName": "会社名",
+    "home": "ホーム",
+    "about": "会社概要",
+    "contact": "お問い合わせ",
+    "blog": "ブログ"
+  },
+  "aboutUs": {
+    "button": "会社概要",
+    "description": "空気輸送システムおよび化学プラントの設計、エンジニアリング調達・建設（EPC）の専門サービスを提供しています。1964年に設立され、大阪に拠点を置く大手エンジニアリング会社である親会社、積水アクアシステム株式会社から得たノウハウと技術を有しています。基本設計から調達、試運転まで幅広いサービスを提供しています。",
+    "companyName": "Sekisui Plant (Thailand) Co., Ltd.",
+    "stats": {
+      "customers": "1999",
+      "customersLabel": "満足したお客様",
+      "projects": "1721",
+      "projectsLabel": "完了したプロジェクト",
+      "awards": "97",
+      "awardsLabel": "受賞歴",
+      "workers": "1650",
+      "workersLabel": "専門スタッフ"
+    }
+  },
+  "myProject": {
+    "title": "誰も自ら苦痛を好む者はいない",
+    "subtitle": "ページのレイアウトを見ると、読者は可読な内容に気を取られるということはよく知られています。Lorem Ipsumを使う理由は、その分布が比較的自然だからです。",
+    "titleImage01": "ITは長い",
+    "descImage01": "ページのレイアウトを見ると、読者は可読な内容に気を取られます。",
+    "titleImage02": "ITは長い",
+    "descImage02": "ページのレイアウトを見ると、読者は可読な内容に気を取られます。",
+    "titleImage03": "ITは長い",
+    "descImage03": "ページのレイアウトを見ると、読者は可読な内容に気を取られます。"
+  }
+  ,
+  "contactPage": {
+    "title": "お問い合わせ",
+    "subtitle": "エンジニアリングチームにお問い合わせください",
+    "form": {
+      "firstname": "名",
+      "lastname": "姓",
+      "email": "メールアドレス",
+      "phone": "電話番号",
+      "subject": "件名",
+      "message": "メッセージ",
+      "submit": "送信"
+    },
+    "info": {
+      "address": {
+        "title": "住所",
+        "desc": "158 The Seaboard Building, 1st Floor Zone A & B, Noen Phayom Road, Maptaphut, Muang Rayong, Rayong 21150"
+      },
+      "contact": {
+        "title": "連絡先",
+        "phone": "Telephone Number: +66(0)33-014-681",
+        "email": "Email: demo@gmail.com"
+      },
+      "social": {
+        "title": "つながる"
+      }
+    }
+  }
+}

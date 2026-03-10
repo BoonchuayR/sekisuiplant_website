@@ -1,0 +1,86 @@
+{
+  "hero": {
+    "backed": "Backed by technology and experience from the SEKISUI Chemical Group",
+    "titleLine1": "Industrial Plant",
+    "titleLine2": "Engineering",
+    "subtitle": "Engineering Solutions for Modern Manufacturing Plants",
+    "contact": "Contact Us"
+  },
+  "service": {
+    "button": "Service",
+    "heading": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+    "card": {
+      "title": "Global Reach",
+      "desc": "We provide services worldwide, ensuring quality and reliability."
+    }
+  },
+  "navbar": {
+    "companyName": "CompanyName",
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact Us",
+    "blog": "Blog"
+  },
+
+  "aboutUs": {
+    "button": "About Us",
+    "description": "provides specialized services in designing, and engineering procurement & construction (EPC) of a pneumatic conveyor system as well as a chemical plant. We possess know-hows and technologies obtained from our parent company; Sekisui Aqua Systems Co., Ltd., a leading engineering firm established in 1964 and based in Osaka. Our services range from a basic design to procurement and commissioning.",
+    "companyName": "Sekisui Plant (Thailand) Co., Ltd.",
+    "stats": {
+      "customers": "1999",
+      "customersLabel": "happy customers",
+      "projects": "1721",
+      "projectsLabel": "project done",
+      "awards": "97",
+      "awardsLabel": "awards win",
+      "workers": "1650",
+      "workersLabel": "expert worker"
+    }
+  },
+  "myProject": {
+    "title": "Neque porro quisquam est qui dolorem ipsum quia dolor",
+    "subtitle": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution ",
+    "titleImage01": "IT is a long",
+    "descImage01": "It is a long established fact that a reader will be distracted by the readable content of a page when looking ",
+    "titleImage02": "IT is a long",
+    "descImage02": "It is a long established fact that a reader will be distracted by the readable content of a page when looking ",
+    "titleImage03": "IT is a long",
+    "descImage03": "It is a long established fact that a reader will be distracted by the readable content of a page when looking "
+  },
+    "contactSection": {
+    "title": "Start Your Industrial Project With Confidence",
+    "desc": "Our experienced engineering team is ready to support your project from concept and design to construction and commissioning.",
+    "button": "Contact Us"
+  },
+  "contactPage": {
+    "title": "Contact Us",
+    "subtitle": "Contact Our Engineering Team",
+    "form": {
+      "firstname": "First Name",
+      "lastname": "Last Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Your Message",
+      "privacy": {
+        "label": "To send this contact form, please agree to our",
+        "link": "Privacy Policy"
+      },
+      "submit": "Submit"
+    },
+    "info": {
+      "address": {
+        "title": "Address",
+        "desc": "158 The Seaboard Building, 1st Floor Zone A & B, Noen Phayom Road, Maptaphut, Muang Rayong, Rayong 21150"
+      },
+      "contact": {
+        "title": "Contact",
+        "phone": "Telephone Number: +66(0)33-014-681",
+        "email": "Email: demo@gmail.com"
+      },
+      "social": {
+        "title": "Stay Connected"
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 390">
+  <rect width="740" height="390" fill="#ffffff"/>
+  <!-- red stripes -->
+  <rect width="740" height="30" y="0" fill="#b22234"/>
+  <rect width="740" height="30" y="60" fill="#b22234"/>
+  <rect width="740" height="30" y="120" fill="#b22234"/>
+  <rect width="740" height="30" y="180" fill="#b22234"/>
+  <rect width="740" height="30" y="240" fill="#b22234"/>
+  <rect width="740" height="30" y="300" fill="#b22234"/>
+
+  <!-- blue canton -->
+  <rect x="0" y="0" width="296" height="210" fill="#3c5aa6"/>
+
+  <!-- simplified stars (circles) -->
+  <g fill="#ffffff">
+    <circle cx="24" cy="24" r="6" />
+    <circle cx="56" cy="24" r="6" />
+    <circle cx="88" cy="24" r="6" />
+    <circle cx="120" cy="24" r="6" />
+    <circle cx="152" cy="24" r="6" />
+    <circle cx="184" cy="24" r="6" />
+
+    <circle cx="40" cy="52" r="6" />
+    <circle cx="72" cy="52" r="6" />
+    <circle cx="104" cy="52" r="6" />
+    <circle cx="136" cy="52" r="6" />
+    <circle cx="168" cy="52" r="6" />
+
+    <circle cx="24" cy="80" r="6" />
+    <circle cx="56" cy="80" r="6" />
+    <circle cx="88" cy="80" r="6" />
+    <circle cx="120" cy="80" r="6" />
+    <circle cx="152" cy="80" r="6" />
+    <circle cx="184" cy="80" r="6" />
+  </g>
+</svg>

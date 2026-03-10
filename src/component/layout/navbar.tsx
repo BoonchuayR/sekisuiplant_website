@@ -2,9 +2,27 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import LanguageSwitcher from "@/component/i18n/LanguageSwitcher";
+import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
+import getLocaleFromPath from "@/i18n/utils";
 
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState(false);
+  const t = useTranslations("navbar");
+  const pathname = usePathname() ?? "/";
+  const currentLocale = getLocaleFromPath(pathname) ?? "en";
+
+  const buildHref = (route: string) => {
+    if (route === "/") return `/${currentLocale}`;
+    return `/${currentLocale}${route}`;
+  };
+
+  const isActive = (route: string) => {
+    const href = buildHref(route);
+    if (route === "/") return pathname === href || pathname === href + "/";
+    return pathname === href || pathname.startsWith(href + "/");
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -15,34 +33,37 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <header className="border-b border-gray-200 bg-mainBlue">
-      <nav className="max-w-5xl mx-auto flex justify-between items-center p-4" role="navigation" aria-label="main navigation">
+    <header className="shadow-sm bg-white rounded-full px-10 -translate-x-1/2 max-w-[90%] w-full left-1/2 fixed top-3 z-50">
+      <nav className=" mx-auto flex justify-between items-center p-4" role="navigation" aria-label="main navigation">
         <div className="font-bold text-lg">
-          <Link href="/" className="text-white">CompanyName</Link>
+          <Link href="/" className="text-mainBlue">{t("companyName")}</Link>
         </div>
 
         <div className="flex items-center gap-4">
-          <ul className="hidden md:flex gap-4 list-none m-0 p-0">
+          <ul className="hidden md:flex gap-10 list-none m-0 p-0">
             <li>
-              <Link href="/" className="text-white hover:text-gray-300">Home</Link>
+              <Link href={buildHref('/')} className={`${isActive('/') ? 'text-mainBlue' : 'text-gray-500'} hover:text-mainBlue`}>{t("home")}</Link>
             </li>
             <li>
-              <Link href="/about" className="text-white hover:text-gray-300">About</Link>
+              <Link href={buildHref('/about')} className={`${isActive('/about') ? 'text-mainBlue' : 'text-gray-500'} hover:text-mainBlue`}>{t("about")}</Link>
             </li>
             <li>
-              <Link href="/services" className="text-white hover:text-gray-300">Services</Link>
+              <Link href={buildHref('/contact')} className={`${isActive('/contact') ? 'text-mainBlue' : 'text-gray-500'} hover:text-mainBlue`}>{t("contact")}</Link>
             </li>
             <li>
-              <Link href="/contact" className="text-white hover:text-gray-300">Contact</Link>
+              <Link href={buildHref('/blog')} className={`${isActive('/blog') ? 'text-mainBlue' : 'text-gray-500'} hover:text-mainBlue`}>{t("blog")}</Link>
             </li>
           </ul>
+          <div className="relative">
+            <LanguageSwitcher />
+          </div>
 
           <button
             type="button"
             aria-controls="mobile-menu"
             aria-expanded={open}
             onClick={() => setOpen(!open)}
-            className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-mainBlue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
             <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
             {open ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
@@ -53,26 +74,31 @@ const Navbar: React.FC = () => {
       <div id="mobile-menu" className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`} aria-hidden={!open}>
         <ul className="px-4 pt-2 pb-4 space-y-1 bg-mainBlue">
           <li>
-            <Link href="/" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-100 hover:text-mainBlue" onClick={() => setOpen(false)}>
-              Home
+            <Link href={buildHref('/')} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-100 hover:text-mainBlue" onClick={() => setOpen(false)}>
+              {t("home")}
             </Link>
           </li>
           <li>
-            <Link href="/about" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-100 hover:text-mainBlue" onClick={() => setOpen(false)}>
-              About
+            <Link href={buildHref('/about')} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-100 hover:text-mainBlue" onClick={() => setOpen(false)}>
+              {t("about")}
             </Link>
           </li>
           <li>
-            <Link href="/services" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-100 hover:text-mainBlue" onClick={() => setOpen(false)}>
-              Services
+            <Link href={buildHref('/contact')} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-100 hover:text-mainBlue" onClick={() => setOpen(false)}>
+              {t("contact")}
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-100 hover:text-mainBlue" onClick={() => setOpen(false)}>
-              Contact
+            <Link href={buildHref('/blog')} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-100 hover:text-mainBlue" onClick={() => setOpen(false)}>
+              {t("blog")}
             </Link>
           </li>
         </ul>
+        <div className="pt-3 pb-3 flex items-center justify-center">
+          <div className="relative">
+            <LanguageSwitcher />
+          </div>
+        </div>
       </div>
     </header>
   );

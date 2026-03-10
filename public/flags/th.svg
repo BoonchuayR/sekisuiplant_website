@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Thailand flag: red, white, blue(double), white, red -->
+  <rect width="900" height="600" fill="#ed1c24" />
+  <rect y="100" width="900" height="100" fill="#ffffff" />
+  <rect y="200" width="900" height="200" fill="#2e5aa8" />
+  <rect y="400" width="900" height="100" fill="#ffffff" />
+  <rect y="500" width="900" height="100" fill="#ed1c24" />
+</svg>
