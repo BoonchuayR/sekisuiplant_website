@@ -48,7 +48,7 @@
     "titleImage03": "IT is a long",
     "descImage03": "It is a long established fact that a reader will be distracted by the readable content of a page when looking "
   },
-  "contactSection": {
+    "contactSection": {
     "title": "Start Your Industrial Project With Confidence",
     "desc": "Our experienced engineering team is ready to support your project from concept and design to construction and commissioning.",
     "button": "Contact Us"
@@ -117,41 +117,41 @@
           }
         }
       ]
+    }
+  },
+  "productServicePage": {
+    "hero": {
+      "titleFirst": "Our",
+      "titleSecond": "Services",
+      "description1": "Since our company’s establishment, we have served customers’ needs as a general engineering company utilizing accumulation of our plant technology experiences for resin storage, conveying, blending plant in SEKISUI chemical group.",
+      "description2": "We are expanding our business field such as chemical, pharmaceutical, food plant for customers outside Sekisui Group.",
+      "description3": "Planning, designing, engineering, maintenance of industrial facilities and equipment. Liquid handling and storage facilities (ultra-pure water, adhesive, paint and varnish etc.)"
     },
-
-    "productServicePage": {
-      "hero": {
-        "titleFirst": "Our",
-        "titleSecond": "Services",
-        "description1": "Since our company’s establishment, we have served customers’ needs as a general engineering company utilizing accumulation of our plant technology experiences for resin storage, conveying, blending plant in SEKISUI chemical group.",
-        "description2": "We are expanding our business field such as chemical, pharmaceutical, food plant for customers outside Sekisui Group.",
-        "description3": "Planning, designing, engineering, maintenance of industrial facilities and equipment. Liquid handling and storage facilities (ultra-pure water, adhesive, paint and varnish etc.)"
+    "common": {
+      "viewMore": "View More"
+    },
+    "services": {
+      "plantConstruction": {
+        "badge": "Sekisui Plant's Specialized Products",
+        "title": "Plant Construction",
+        "description": "We provide comprehensive plant construction solutions from planning and engineering to installation and maintenance. Our team supports safe, efficient, and reliable systems tailored to industrial operations."
       },
-      "common": {
-        "viewMore": "View More"
+      "panelTank": {
+        "badge": "Sekisui Water Storage Tanks",
+        "title": "Panel Tank",
+        "description": "Our panel tank systems are designed for durability, hygiene, and long-term performance. They are suitable for industrial and commercial water storage applications with flexible installation options."
       },
-      "services": {
-        "plantConstruction": {
-          "badge": "Sekisui Plant's Specialized Products",
-          "title": "Plant Construction",
-          "description": "We provide comprehensive plant construction solutions from planning and engineering to installation and maintenance. Our team supports safe, efficient, and reliable systems tailored to industrial operations."
-        },
-        "panelTank": {
-          "badge": "Sekisui Water Storage Tanks",
-          "title": "Panel Tank",
-          "description": "Our panel tank systems are designed for durability, hygiene, and long-term performance. They are suitable for industrial and commercial water storage applications with flexible installation options."
-        },
-        "heatExchangeCoating": {
-          "badge": "SEKISUI Protect Coat",
-          "title": "Heat Exchange Coating",
-          "description": "We offer surface protection and coating solutions that help improve durability and performance in demanding environments. The system is suitable for long-term maintenance and facility protection."
-        }
-      },
-      "cta": {
-        "title": "Need support for your next project?",
-        "description": "Talk to our team about your product and service requirements. We are ready to support planning, consultation, and implementation for your industrial solutions.",
-        "button": "Contact Us"
+      "heatExchangeCoating": {
+        "badge": "SEKISUI Protect Coat",
+        "title": "Heat Exchange Coating",
+        "description": "We offer surface protection and coating solutions that help improve durability and performance in demanding environments. The system is suitable for long-term maintenance and facility protection."
       }
+    },
+    "cta": {
+      "title": "Need support for your next project?",
+      "description": "Talk to our team about your product and service requirements. We are ready to support planning, consultation, and implementation for your industrial solutions.",
+      "button": "Contact Us"
     }
   }
+
 }

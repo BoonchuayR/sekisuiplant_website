@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
               <Link href={buildHref('/blog')} className={`${isActive('/blog') ? 'text-mainBlue' : 'text-gray-500'} hover:text-mainBlue`}>{t("blog")}</Link>
             </li>
           </ul>
-          <div className="relative hidden">
+          <div className="relative">
             <LanguageSwitcher />
           </div>
 
