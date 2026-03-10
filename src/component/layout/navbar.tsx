@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
               <Link href={buildHref('/product-service')} className={`${isActive('/product-service') ? 'text-mainBlue' : 'text-gray-500'} hover:text-mainBlue`}>{t("product-service")}</Link>
             </li>
             <li>
-              <Link href={buildHref('/blog')} className={`${isActive('/blog') ? 'text-mainBlue' : 'text-gray-500'} hover:text-mainBlue`}>{t("blog")}</Link>
+              <Link href={buildHref('/policy')} className={`${isActive('/policy') ? 'text-mainBlue' : 'text-gray-500'} hover:text-mainBlue`}>{t("policy")}</Link>
             </li>
           </ul>
           <div className="relative">
@@ -97,8 +97,8 @@ const Navbar: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link href={buildHref('/blog')} className={`block py-2 rounded-md text-base font-medium ${isActive('/blog') ? 'text-mainBlue font-semibold' : 'text-gray-500'} hover:text-mainBlue`} onClick={() => setOpen(false)}>
-              {t("blog")}
+            <Link href={buildHref('/policy')} className={`block py-2 rounded-md text-base font-medium ${isActive('/policy') ? 'text-mainBlue font-semibold' : 'text-gray-500'} hover:text-mainBlue`} onClick={() => setOpen(false)}>
+              {t("policy")}
             </Link>
           </li>
         </ul>
