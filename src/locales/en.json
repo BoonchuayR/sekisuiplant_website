@@ -48,7 +48,7 @@
     "titleImage03": "IT is a long",
     "descImage03": "It is a long established fact that a reader will be distracted by the readable content of a page when looking "
   },
-    "contactSection": {
+  "contactSection": {
     "title": "Start Your Industrial Project With Confidence",
     "desc": "Our experienced engineering team is ready to support your project from concept and design to construction and commissioning.",
     "button": "Contact Us"
@@ -152,6 +152,128 @@
       "description": "Talk to our team about your product and service requirements. We are ready to support planning, consultation, and implementation for your industrial solutions.",
       "button": "Contact Us"
     }
-  }
+  },
 
+  "privacyPolicyPage": {
+    "title": "Privacy Policy under PDPA",
+    "contactEmail": "do-sso@sekisui.com",
+    "intro": {
+      "0": "SEKISUI SOUTHEAST ASIA CO., LTD., along with SEKISUI SPECIALTY CHEMICALS (THAILAND) CO., LTD., S AND L SPECIALTY POLYMERS CO., LTD., SEKISUI POLYMATECH (THAILAND) CO., LTD., SEKISUI S-LEC (THAILAND) CO., LTD., THAI SEKISUI FOAM CO., LTD. (\"Sekisui\", \"we\" or \"us\") greatly appreciates the opportunity to work with you. We value your trust and strive continually to justify that trust.",
+      "1": "As you likely will have heard, the Personal Data Protection Act BE 2562 (2019) (\"PDPA\") is effective from June 1, 2022, bringing with it new requirements for the handling of personal data, including personal data of Sekisui's directors and business partners such as any prospective and current customers, suppliers, consultants and contractors.",
+      "2": "Sekisui is committed to protecting the privacy and security of your personal data. This data protection notice describes how we collect and use personal data about you and individuals affiliated with you prior to, during, and after your relationship with us. It applies to all prospective, current and business partners. As updated from time to time, this notice will continue to apply after our work for you concludes.",
+      "3": "With respect to certain individuals in Thailand, Sekisui may be considered a data controller under the PDPA as it may vary from time to time. This means that we are responsible for deciding how we hold and use personal data about you. We are providing this notice pursuant to the PDPA. This notice does not form part of any contract to provide legal services. We may update this notice at any time."
+    },
+    "terms": {
+      "title": "Terms used in this notice",
+      "paragraph1": "In this notice, Personal Data means any information relating to an identified or identifiable natural person. An identifiable natural person is one who can be identified, directly or indirectly, by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person.",
+      "paragraph2": "Processing means any operation or set of operations which is performed on personal data, whether or not by automated means, such as collection, recording, organization, structuring, storage, adaptation or alteration, retrieval, consultation, use, disclosure by transmission, dissemination or otherwise making available, alignment or combination, restriction, erasure or destruction, and Processed shall be construed accordingly.",
+      "paragraph3": "Sensitive Personal Data means information that reveals racial or ethnic origin, political opinions, religious or philosophical beliefs, sexual behavior, criminal records, health data, disability, trade union information, genetic data, biometric data, or any data which may affect you in the same manner, of a natural person."
+    },
+    "dataCollection": {
+      "title": "The Personal Data that Sekisui collects",
+      "paragraph1": "Depending on the requirements of a particular matter, Sekisui may receive the following Personal Data about you, which includes Sensitive Personal Data:",
+      "items": {
+        "0": "Your name;",
+        "1": "Your contact details (e.g. postal address, personal or business email address, telephone number, mobile numbers);",
+        "2": "Your SNS and Chat tools information (Facebook ID, LINE ID etc.);",
+        "3": "Your date of birth;",
+        "4": "Your age or ethnicity;",
+        "5": "Your nationality;",
+        "6": "Your bank details;",
+        "7": "Your governmental identification numbers;",
+        "8": "Information relating to your health;",
+        "9": "Information relating to your insurance;",
+        "10": "Information relating to your family;",
+        "11": "Your educational history and qualifications;",
+        "12": "Your employment history;",
+        "13": "Your position and job title;",
+        "14": "Information relating to your employment and work performance;",
+        "15": "Information relating to your travel arrangements;",
+        "16": "Your passport and visa data;",
+        "17": "Numerous security information, which may include access logs and CCTV or security cameras footage;",
+        "18": "Images and photographs;",
+        "19": "Information relating to your family;",
+        "20": "Information relating to whistle-blowing system and other legal matters;",
+        "21": "Log files and device information (IP address, the date and time of the request, the requested URL, etc.);",
+        "22": "Cookies (in case you access and use this website); and",
+        "23": "Other information relating to the matters which Sekisui asks for you."
+      },
+      "paragraph2": "In addition to Personal Data that you provide to Sekisui, Sekisui may obtain Personal Data about you from others, including third-party databases in the course of performing required checks such as anti-money laundering or sanctions checks. Depending on the circumstances of a particular matter, we also may obtain Personal Data from other parties in connection with our work on your behalf."
+    },
+    "reasons": {
+      "title": "Why Sekisui uses your Personal Data",
+      "paragraph1": "The legal basis that Sekisui relies upon for Processing your Personal Data, whether such Processing occurs before, during or after your relationship with Sekisui, will fall into one of the following categories:",
+      "items": {
+        "0": "The performance of any of Sekisui's obligations under your engagement with Sekisui as well as Sekisui's policies or legal obligations relating Anti-Money Laundering and sanctions checks;",
+        "1": "The legitimate interests of Sekisui, including checks necessary to protect Sekisui's financial position; and",
+        "2": "where applicable, your provision of consent for Sekisui to Process your Personal Data in a certain way.",
+        "3": "The legal basis that Sekisui relies upon for Processing your Sensitive Personal Data, whether such Processing occurs before, during or after your relationship with Sekisui, will fall into one of the following categories:"
+      },
+      "paragraph2": "Sekisui does not require consent to use Sensitive Personal Data in order to carry out its legal obligations. If Sekisui may approach you for your written consent to allow it to Process Sensitive Personal Data, if Sekisui does so, it will provide you with full details of the information it would like to use and the reason for such use, so that you can consider whether you wish to consent."
+    },
+    "purposes": {
+      "title": "Sekisui may use your Personal Data, including Sensitive Personal Data, for the following purposes:",
+      "subtitle": "",
+      "items": {
+        "0": "administering arrangements concerning your relationship with Sekisui;",
+        "1": "any communication for any business opportunities or support with you;",
+        "2": "carrying out checks prior to or during the course of your relationship with Sekisui, such as Anti-Money Laundering or sanctions checks;",
+        "3": "conducting Sekisui's ongoing business;",
+        "4": "processing any payments received on your behalf, including any legal obligations relating to such payments;",
+        "5": "providing you and your representatives with marketing information about Sekisui and our services;",
+        "6": "safety and security in our premises;",
+        "7": "recruitment, employment, development and security of this website; and",
+        "8": "analysis for the use of this website by cookies.",
+        "9": "other lawful business purposes."
+      },
+      "paragraph1": "We will not Process your Personal Data, or Sensitive Personal Data, for any other purposes incompatible with the purposes mentioned above.",
+      "paragraph2": "We use the information and data generated by cookies to analyze the use of this website. This enables us to find out more about the number of visits to a web page, user behavior or the length of your stay and to draw conclusions about which content on this website is particularly interesting and which is less interesting for visitors. We may take this information and use it internally for offering improved content or less website visitors.",
+      "paragraph3": {
+        "before": "Further information about Google Analytics can be found under"
+      },
+      "paragraph4": "Additionally, we have activated the IP anonymization of Google Analytics. Before the IP address is transmitted to Google's servers in the US, it is shortened within Thailand. This procedure makes the IP address untraceable. Only in exceptional cases will the complete IP address be transmitted to the US and shortened by your browser as part of Google Analytics."
+    },
+    "noProvide": {
+      "title": "If you fail to provide Personal Data",
+      "paragraph1": "If you fail to provide certain Personal Data when requested, Sekisui may not be able to perform the services that it has agreed to provide for you, or may be prevented from complying with our legal obligations."
+    },
+    "sharing": {
+      "title": "With whom Sekisui will share your Personal Data",
+      "paragraph1": "Sekisui will not sell your Personal Data to third parties.",
+      "paragraph2": "For the provision of our services Sekisui may share your Personal Data on a strictly need-to-know basis with affiliate companies or parent companies of Sekisui.",
+      "paragraph3": "Sekisui may sometimes share your Personal Data with its trusted service providers and other third parties who perform services and functions on Sekisui's behalf to support its interactions with you, including for example technology providers, disclosure and discovery services, experts, and consultants.",
+      "paragraph4": "Sekisui may also have to disclose your Personal Data to comply with a legal obligation imposed on it."
+    },
+    "transfer": {
+      "title": "Where Sekisui stores your Personal Data and how it secures your Personal Data",
+      "paragraph1": "Sekisui may disclose and transfer your Personal Data to foreign countries, in order to achieve certain purposes. It should be noted that there are possible risks and procedures involved. However, please note that Sekisui makes an effort to implement a high standard of security and confidentiality to protect your Personal Data."
+    },
+    "retention": {
+      "title": "How long will Sekisui keep your Personal Data?",
+      "paragraph1": "Sekisui will retain your Personal Data as necessary to comply with our legal obligations, resolve disputes, and enforce our agreements. After that time, Sekisui will delete your Personal Data from its systems and notify any third parties to whom it transferred your Personal Data to delete that data."
+    },
+    "rights": {
+      "title": "Your rights",
+      "paragraph1": "You have a number of rights under the PDPA, including the right to:",
+      "items": {
+        "0": "Access a copy of the Personal Data that Sekisui holds about you;",
+        "1": "Rectify inaccuracies in Personal Data that Sekisui holds about you;",
+        "2": "Have the Personal Data that Sekisui holds about you erased in certain circumstances;",
+        "3": "Restrict the Processing of your Personal Data in certain circumstances;",
+        "4": "Object to the Processing of your Personal Data in certain circumstances;",
+        "5": "Transfer the Personal Data that Sekisui holds about you to another entity in certain circumstances;",
+        "6": "Withdraw any consent you have provided."
+      },
+      "paragraph2": "If you would like to invoke any of those rights, please inform"
+    },
+    "inquiries": {
+      "title": "Inquiries",
+      "paragraph1": "If you have an inquiry about the way Sekisui is using your Personal Data then initially you should contact"
+    },
+    "changes": {
+      "title": "Changes to Policy",
+      "paragraph1": "We reserve the right to change, modify, add or remove portions of this Privacy Policy from time to time and in our sole discretion. Our policy is to let you that changes have been made by indicating on the Privacy Policy the date it was last updated."
+    },
+    "lastUpdated": "Last Updated: June 1, 2022"
+  }
 }
