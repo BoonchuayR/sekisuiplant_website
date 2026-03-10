@@ -82,5 +82,40 @@
         "title": "Stay Connected"
       }
     }
+  },
+  "aboutUsPage": {
+    "companyOutline": {
+      "title": "Company Outline",
+      "rows": [
+        {
+          "label": "Name",
+          "value": "SEKISUI PLANT (THAILAND) CO., LTD."
+        },
+        {
+          "label": "Headquarter",
+          "value": "158 The Seaboard Building, 1st Floor Zone A & B, Noen Phayom Road, Maptaphut, Muang Rayong, Rayong 21150Telephone Number: +66(0)33-014-681"
+        },
+        {
+          "label": "Establishment",
+          "value": "29th January 2015"
+        },
+        {
+          "label": "Board of Directors",
+          "value": {
+            "line1": "Managing Director - Takeshi Arima (Mainly residing in Thailand)",
+            "line2": "Director - Katsunori Nishizaki",
+            "line3": "Director - Teruji Okuno"
+          }
+        },
+        {
+          "label": "Description of Businesses",
+          "value": {
+            "line1": "A. Industrial Plant Engineering",
+            "line2": "B. Environment-related Procurement and Construction",
+            "line3": "C. Manufacturing and Sales of Major Industrial Products"
+          }
+        }
+      ]
+    }
   }
 }

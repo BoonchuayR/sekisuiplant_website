@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <header className="shadow-sm bg-white rounded-full px-10 -translate-x-1/2 max-w-[90%] w-full left-1/2 fixed top-3 z-50">
+    <header className={`shadow-sm bg-white ${open ? 'rounded-md' : 'rounded-full'} md:rounded-full px-10 -translate-x-1/2 max-w-[90%] w-full left-1/2 fixed top-3 z-50`}>
       <nav className=" mx-auto flex justify-between items-center p-4" role="navigation" aria-label="main navigation">
         <div className="font-bold text-lg">
           <Link href="/" className="text-mainBlue">{t("companyName")}</Link>
@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
               <Link href={buildHref('/')} className={`${isActive('/') ? 'text-mainBlue' : 'text-gray-500'} hover:text-mainBlue`}>{t("home")}</Link>
             </li>
             <li>
-              <Link href={buildHref('/about')} className={`${isActive('/about') ? 'text-mainBlue' : 'text-gray-500'} hover:text-mainBlue`}>{t("about")}</Link>
+              <Link href={buildHref('/about-us')} className={`${isActive('/about-us') ? 'text-mainBlue' : 'text-gray-500'} hover:text-mainBlue`}>{t("about")}</Link>
             </li>
             <li>
               <Link href={buildHref('/contact')} className={`${isActive('/contact') ? 'text-mainBlue' : 'text-gray-500'} hover:text-mainBlue`}>{t("contact")}</Link>
@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
               <Link href={buildHref('/blog')} className={`${isActive('/blog') ? 'text-mainBlue' : 'text-gray-500'} hover:text-mainBlue`}>{t("blog")}</Link>
             </li>
           </ul>
-          <div className="relative">
+          <div className="relative hidden">
             <LanguageSwitcher />
           </div>
 
@@ -72,29 +72,29 @@ const Navbar: React.FC = () => {
       </nav>
 
       <div id="mobile-menu" className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`} aria-hidden={!open}>
-        <ul className="px-4 pt-2 pb-4 space-y-1 bg-mainBlue">
+        <ul className="px-4 pt-2 pb-4 space-y-1  text-center">
           <li>
-            <Link href={buildHref('/')} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-100 hover:text-mainBlue" onClick={() => setOpen(false)}>
+            <Link href={buildHref('/')} className={`block py-2 rounded-md text-base font-medium ${isActive('/') ? 'text-mainBlue font-semibold' : 'text-gray-500'} hover:text-mainBlue`} onClick={() => setOpen(false)}>
               {t("home")}
             </Link>
           </li>
           <li>
-            <Link href={buildHref('/about')} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-100 hover:text-mainBlue" onClick={() => setOpen(false)}>
+            <Link href={buildHref('/about-us')} className={`block py-2 rounded-md text-base font-medium ${isActive('/about-us') ? 'text-mainBlue font-semibold' : 'text-gray-500'} hover:text-mainBlue`} onClick={() => setOpen(false)}>
               {t("about")}
             </Link>
           </li>
           <li>
-            <Link href={buildHref('/contact')} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-100 hover:text-mainBlue" onClick={() => setOpen(false)}>
+            <Link href={buildHref('/contact')} className={`block py-2 rounded-md text-base font-medium ${isActive('/contact') ? 'text-mainBlue font-semibold' : 'text-gray-500'} hover:text-mainBlue`} onClick={() => setOpen(false)}>
               {t("contact")}
             </Link>
           </li>
           <li>
-            <Link href={buildHref('/blog')} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-100 hover:text-mainBlue" onClick={() => setOpen(false)}>
+            <Link href={buildHref('/blog')} className={`block py-2 rounded-md text-base font-medium ${isActive('/blog') ? 'text-mainBlue font-semibold' : 'text-gray-500'} hover:text-mainBlue`} onClick={() => setOpen(false)}>
               {t("blog")}
             </Link>
           </li>
         </ul>
-        <div className="pt-3 pb-3 flex items-center justify-center">
+        <div className="pt-2 pb-3 flex items-center justify-center">
           <div className="relative">
             <LanguageSwitcher />
           </div>

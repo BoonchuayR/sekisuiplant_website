@@ -1,4 +1,5 @@
 import AboutUsSection from "@/component/section/aboutUsSection";
+import CompanyOutlineSection from "@/component/section/companyOutlineSection";
 
 function AboutUs() {
   return (
@@ -13,6 +14,10 @@ function AboutUs() {
 
       <div className="bg-foreground">
         <AboutUsSection />
+      </div>
+
+      <div className="">
+        <CompanyOutlineSection />
       </div>
     </div>
   );
