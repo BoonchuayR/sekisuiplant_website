@@ -47,17 +47,41 @@
     "titleImage03": "ITは長い",
     "descImage03": "ページのレイアウトを見ると、読者は可読な内容に気を取られます。"
   },
+
   "contactPage": {
     "title": "お問い合わせ",
-    "subtitle": "エンジニアリングチームにお問い合わせください",
+    "subtitle": "エンジニアリングチームへお問い合わせください",
     "form": {
       "firstname": "名",
       "lastname": "姓",
       "email": "メールアドレス",
       "phone": "電話番号",
       "subject": "件名",
-      "message": "メッセージ",
-      "submit": "送信"
+      "message": "お問い合わせ内容",
+      "privacy": {
+        "label": "このお問い合わせフォームを送信するには、",
+        "link": "プライバシーポリシー"
+      },
+      "submit": "送信",
+      "validation": {
+        "firstNameRequired": "名を入力してください。",
+        "lastNameRequired": "姓を入力してください。",
+        "emailRequired": "メールアドレスを入力してください。",
+        "emailInvalid": "有効なメールアドレスを入力してください。",
+        "phoneRequired": "電話番号を入力してください。",
+        "subjectRequired": "件名を入力してください。",
+        "messageRequired": "お問い合わせ内容を入力してください。",
+        "privacyRequired": "プライバシーポリシーに同意してください。"
+      },
+      "status": {
+        "loadingTitle": "送信中",
+        "loadingMessage": "メッセージを送信しています。しばらくお待ちください。",
+        "successTitle": "送信が完了しました",
+        "successMessage": "お問い合わせありがとうございます。担当者よりできるだけ早くご連絡いたします。",
+        "errorTitle": "エラーが発生しました",
+        "errorMessage": "メッセージを送信できませんでした。もう一度お試しください。",
+        "sending": "送信中..."
+      }
     },
     "info": {
       "address": {
@@ -66,11 +90,11 @@
       },
       "contact": {
         "title": "連絡先",
-        "phone": "Telephone Number: +66(0)33-014-681",
-        "email": "Email: demo@gmail.com"
+        "phone": "電話番号: +66(0)33-014-681",
+        "email": "メール: demo@gmail.com"
       },
       "social": {
-        "title": "つながる"
+        "title": "フォローする"
       }
     }
   },

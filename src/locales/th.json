@@ -54,20 +54,43 @@
       "firstname": "ชื่อ",
       "lastname": "นามสกุล",
       "email": "อีเมล",
-      "phone": "เบอร์ติดต่อ",
-      "subject": "เรื่อง",
+      "phone": "เบอร์โทรศัพท์",
+      "subject": "หัวข้อ",
       "message": "ข้อความของคุณ",
-      "submit": "ส่ง"
+      "privacy": {
+        "label": "ในการส่งแบบฟอร์มนี้ กรุณายอมรับ",
+        "link": "นโยบายความเป็นส่วนตัว"
+      },
+      "submit": "ส่งข้อความ",
+      "validation": {
+        "firstNameRequired": "กรุณากรอกชื่อ",
+        "lastNameRequired": "กรุณากรอกนามสกุล",
+        "emailRequired": "กรุณากรอกอีเมล",
+        "emailInvalid": "รูปแบบอีเมลไม่ถูกต้อง",
+        "phoneRequired": "กรุณากรอกเบอร์โทรศัพท์",
+        "subjectRequired": "กรุณากรอกหัวข้อ",
+        "messageRequired": "กรุณากรอกข้อความ",
+        "privacyRequired": "กรุณายอมรับนโยบายความเป็นส่วนตัว"
+      },
+      "status": {
+        "loadingTitle": "กำลังส่งข้อความ",
+        "loadingMessage": "กำลังส่งข้อความ กรุณารอสักครู่...",
+        "successTitle": "ส่งข้อความสำเร็จ",
+        "successMessage": "ส่งข้อความเรียบร้อยแล้ว เราจะติดต่อกลับโดยเร็วที่สุด",
+        "errorTitle": "เกิดข้อผิดพลาด",
+        "errorMessage": "ส่งข้อความไม่สำเร็จ กรุณาลองใหม่อีกครั้ง",
+        "sending": "กำลังส่ง..."
+      }
     },
     "info": {
       "address": {
         "title": "ที่อยู่",
-        "desc": "158 The Seaboard Building, 1st Floor Zone A & B, Noen Phayom Road, Maptaphut, Muang Rayong, Rayong 21150"
+        "desc": "158 อาคารเดอะซีบอร์ด ชั้น 1 โซน A และ B ถนนเนินพะยอม มาบตาพุด อำเภอเมืองระยอง จังหวัดระยอง 21150"
       },
       "contact": {
         "title": "ติดต่อ",
-        "phone": "Telephone Number: +66(0)33-014-681",
-        "email": "Email: demo@gmail.com"
+        "phone": "เบอร์โทรศัพท์: +66(0)33-014-681",
+        "email": "อีเมล: demo@gmail.com"
       },
       "social": {
         "title": "ติดตามเรา"

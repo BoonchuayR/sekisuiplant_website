@@ -53,6 +53,7 @@
     "desc": "Our experienced engineering team is ready to support your project from concept and design to construction and commissioning.",
     "button": "Contact Us"
   },
+
   "contactPage": {
     "title": "Contact Us",
     "subtitle": "Contact Our Engineering Team",
@@ -67,7 +68,26 @@
         "label": "To send this contact form, please agree to our",
         "link": "Privacy Policy"
       },
-      "submit": "Submit"
+      "submit": "Submit",
+      "validation": {
+        "firstNameRequired": "Please enter your first name.",
+        "lastNameRequired": "Please enter your last name.",
+        "emailRequired": "Please enter your email address.",
+        "emailInvalid": "Please enter a valid email address.",
+        "phoneRequired": "Please enter your phone number.",
+        "subjectRequired": "Please enter a subject.",
+        "messageRequired": "Please enter your message.",
+        "privacyRequired": "Please accept the Privacy Policy."
+      },
+      "status": {
+        "loadingTitle": "Sending message",
+        "loadingMessage": "Your message is being sent. Please wait a moment.",
+        "successTitle": "Message sent successfully",
+        "successMessage": "Thank you for contacting us. We will get back to you as soon as possible.",
+        "errorTitle": "Something went wrong",
+        "errorMessage": "Unable to send your message. Please try again.",
+        "sending": "Sending..."
+      }
     },
     "info": {
       "address": {
