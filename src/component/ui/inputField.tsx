@@ -1,68 +1,63 @@
-"use client";
-import React from "react";
-
 type InputFieldProps = {
-  id?: string;
   name: string;
-  label?: React.ReactNode;
+  label: string;
   placeholder?: string;
   type?: string;
-  value?: string | number;
-  defaultValue?: string | number;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   required?: boolean;
-  className?: string;
   textarea?: boolean;
   rows?: number;
+  value?: string;
+  onChange?: (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => void;
+  onBlur?: (
+    e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => void;
 };
 
-export default function InputField({
-  id,
+function InputField({
   name,
   label,
   placeholder,
   type = "text",
-  value,
-  defaultValue,
-  onChange,
   required = false,
-  className = "",
   textarea = false,
   rows = 4,
+  value,
+  onChange,
+  onBlur,
 }: InputFieldProps) {
-  const inputId = id ?? name;
-  const baseClasses = "mt-1 block w-full rounded-xl border border-gray-300 px-3 py-4 focus:outline-none focus:ring-2 focus:ring-mainBlue focus:border-mainBlue bg-white";
   return (
-    <div className={`w-full ${className}`}>
-      {label && (
-        <label htmlFor={inputId} className="block text-sm font-medium text-gray-700">
-          {label}
-          {required ? <span className="ml-1 text-red-500">*</span> : null}
-        </label>
-      )}
+    <div className="w-full">
+      <label className="mb-2 block text-sm font-medium text-gray-800">
+        {label} {required && <span className="text-red-500">*</span>}
+      </label>
+
       {textarea ? (
         <textarea
-          id={inputId}
           name={name}
           placeholder={placeholder}
+          required={required}
           rows={rows}
-          defaultValue={defaultValue as string | undefined}
-          value={value as string | undefined}
+          value={value}
           onChange={onChange}
-          className={baseClasses}
+          onBlur={onBlur}
+          className="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none transition focus:border-[#1a4093] focus:ring-4 focus:ring-[#1a4093]/10"
         />
       ) : (
         <input
-          id={inputId}
           name={name}
           type={type}
           placeholder={placeholder}
-          defaultValue={defaultValue as string | undefined}
-          value={value as string | undefined}
+          required={required}
+          value={value}
           onChange={onChange}
-          className={baseClasses}
+          onBlur={onBlur}
+          className="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none transition focus:border-[#1a4093] focus:ring-4 focus:ring-[#1a4093]/10"
         />
       )}
     </div>
   );
 }
+
+export default InputField;
