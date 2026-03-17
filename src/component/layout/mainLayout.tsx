@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./navbar";
 import Footer from "./footer";
+import CookieConsentWrapper from "./CookieConsentWrapper";
 
 type Props = { children: React.ReactNode };
 
@@ -11,6 +12,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
       <main className="flex-1">
         {children}
       </main>
+      <CookieConsentWrapper />
       <Footer />
     </div>
   );
