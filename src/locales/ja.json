@@ -19,6 +19,7 @@
     "home": "ホーム",
     "about": "会社概要",
     "contact": "お問い合わせ",
+    "global-hotline": "Global Hotline",
     "product-service": "製品とサービス",
     "policy": "プライバシーポリシー"
   },
@@ -286,5 +287,45 @@
     "preferencesTitle": "設定Cookie",
     "preferencesShort": "設定内容を記憶します",
     "preferencesDescription": "これらのCookieは、言語、地域、その他の設定を記憶し、より最適な体験を提供します。"
+  },
+  "globalHotline": {
+    "title": "Global Hotline ของกลุ่มบริษัทเซกิซุย เคมิคอล",
+    "subtitle": "สายด่วนจากพันธมิตรทางธุรกิจ",
+    "paragraph1" : {
+      "title": "What is Global Hotline ?",
+      "0": "This internal reporting channel is provided so that we can detect in advance any problems that could negatively affect the SEKISUI CHEMICAL Group, such as fraud, and thereby ensure its sound operations.",
+      "1": "Matters that can be reported include significant misconduct and breaches related to compliance, and any acts that may lead to them.",
+      "2": "We will ensure that reporters are not treated disadvantageously in any way because they made a report and that their personal information will be protected.",
+      "3": "You can also report a breach anonymously.",
+      "4": "However, if your report is false reporting or consultation, reporting or consultation for the purpose of slandering or defaming others, and reporting or consultation for other wrongful purposes, we may not be able to accept your report.",
+      "5": "If you find any misconduct or illegal act in the SEKISUI CHEMICAL Group, please don’t hesitate to use this reporting channel to report it."
+    },
+    "paragraph2" : {
+      "title": "2. Persons who can use this reporting channel",
+      "0": "Business partners who have ongoing business relationships with the SEKISUI CHEMICAL Group."
+    },
+    "paragraph3" : {
+      "title": "What you can report",
+      "0": "You can report the following matters in the SEKISUI CHEMICAL Group:",
+      "1": "Fraudulent accounting",
+      "2": "Money laundering",
+      "3": "Embezzlement",
+      "4": "Bribery",
+      "5": "Bid-rigging and cartels",
+      "6": "The divulging or personal use of company or customer information",
+      "7": "Misrepresentation",
+      "8": "Conflicts of interest",
+      "9": "and any other act of misconduct and violations of the law",
+      "10": "Multilingual support. You can report in 19 languages.",
+      "11": "Reporters are protected by whistleblower protection laws in each country"
+    },
+    "paragraph4" : {
+      "title": "4. How to report",
+      "0": "Please use the “dedicated form” below for consultations and reports."
+    },
+    "cta": {
+      "0": "Global Hotline ของกลุ่มบริษัทเซกิซุย เคมิคอล",
+      "1": "สายด่วนจากพันธมิตรทางธุรกิจ"
+    }
   }
 }

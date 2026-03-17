@@ -1,14 +1,17 @@
 "use client";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import LanguageSwitcher from "@/component/i18n/LanguageSwitcher";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import getLocaleFromPath from "@/i18n/utils";
+import { Logo } from "../ui/icon";
 
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState(false);
+  const [mobileContactOpen, setMobileContactOpen] = useState(false);
+  const [desktopContactOpen, setDesktopContactOpen] = useState(false);
   const t = useTranslations("navbar");
   const pathname = usePathname() ?? "/";
   const currentLocale = getLocaleFromPath(pathname) ?? "en";
@@ -32,12 +35,38 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    if (!open) setMobileContactOpen(false);
+  }, [open]);
+
+  const contactRef = useRef<HTMLLIElement | null>(null);
+
+  useEffect(() => {
+    const handleOutside = (e: MouseEvent) => {
+      if (contactRef.current && !contactRef.current.contains(e.target as Node)) {
+        setDesktopContactOpen(false);
+      }
+    };
+
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setDesktopContactOpen(false);
+    };
+
+    document.addEventListener("mousedown", handleOutside);
+    document.addEventListener("keydown", handleKey);
+    return () => {
+      document.removeEventListener("mousedown", handleOutside);
+      document.removeEventListener("keydown", handleKey);
+    };
+  }, []);
+
   return (
-    <header className={`shadow-sm bg-white ${open ? 'rounded-md' : 'rounded-full'} md:rounded-full px-10 -translate-x-1/2 max-w-[90%] w-full left-1/2 fixed top-3 z-50`}>
+    <header className={`shadow-sm bg-white overflow-visible ${open ? 'rounded-md' : 'rounded-full'} md:rounded-full px-10 -translate-x-1/2 max-w-[90%] w-full left-1/2 fixed top-3 z-50`}>
       <nav className=" mx-auto flex justify-between items-center p-4" role="navigation" aria-label="main navigation">
-        <div className="font-bold text-lg">
-          <Link href="/" className="text-mainBlue">{t("companyName")}</Link>
-        </div>
+        <Link href="/">
+          <Logo width={90}/>
+          {/* <Link href="/" className="text-mainBlue">{t("companyName")}</Link> */}
+        </Link>
 
         <div className="flex items-center gap-4">
           <ul className="hidden md:flex gap-10 list-none m-0 p-0">
@@ -47,8 +76,25 @@ const Navbar: React.FC = () => {
             <li>
               <Link href={buildHref('/about-us')} className={`${isActive('/about-us') ? 'text-mainBlue' : 'text-gray-500'} hover:text-mainBlue`}>{t("about")}</Link>
             </li>
-            <li>
-              <Link href={buildHref('/contact')} className={`${isActive('/contact') ? 'text-mainBlue' : 'text-gray-500'} hover:text-mainBlue`}>{t("contact")}</Link>
+            <li className="relative group" ref={contactRef}>
+              <button
+                type="button"
+                onClick={() => setDesktopContactOpen((s) => !s)}
+                aria-expanded={desktopContactOpen}
+                aria-haspopup="true"
+                className={`inline-flex items-center gap-2 ${isActive('/contact') || isActive('/global-hotline') ? 'text-mainBlue' : 'text-gray-500'} hover:text-mainBlue`}
+              >
+                {t("contact")}
+                <span className="text-xs">▾</span>
+              </button>
+              <ul style={{ minWidth: '12rem', width: '12rem' }} className={`absolute left-0 mt-2 w-80 min-w-[20rem] bg-white rounded-md shadow-sm z-50 ${desktopContactOpen ? 'block' : 'hidden'} group-hover:block`}>
+                <li>
+                  <Link href={buildHref('/contact')} onClick={() => setDesktopContactOpen(false)} className={`block px-4 py-2 text-sm hover:bg-gray-100 hover:text-mainBlue border-b border-gray-100 ${isActive('/contact') ? 'text-mainBlue font-semibold' : 'text-gray-700'} hover:bg-gray-50`}>{t("contact")}</Link>
+                </li>
+                <li>
+                  <Link href={buildHref('/global-hotline')} onClick={() => setDesktopContactOpen(false)} className={`block px-4 py-2 text-sm hover:bg-gray-100 hover:text-mainBlue ${isActive('/global-hotline') ? 'text-mainBlue font-semibold' : 'text-gray-700'} hover:bg-gray-50`}>{t("global-hotline")}</Link>
+                </li>
+              </ul>
             </li>
             <li>
               <Link href={buildHref('/product-service')} className={`${isActive('/product-service') ? 'text-mainBlue' : 'text-gray-500'} hover:text-mainBlue`}>{t("product-service")}</Link>
@@ -57,7 +103,7 @@ const Navbar: React.FC = () => {
               <Link href={buildHref('/policy')} className={`${isActive('/policy') ? 'text-mainBlue' : 'text-gray-500'} hover:text-mainBlue`}>{t("policy")}</Link>
             </li>
           </ul>
-          <div className="relative">
+          <div className="relative border border-gray-200 rounded-full">
             <LanguageSwitcher />
           </div>
 
@@ -87,9 +133,23 @@ const Navbar: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link href={buildHref('/contact')} className={`block py-2 rounded-md text-base font-medium ${isActive('/contact') ? 'text-mainBlue font-semibold' : 'text-gray-500'} hover:text-mainBlue`} onClick={() => setOpen(false)}>
-              {t("contact")}
-            </Link>
+            <div>
+              <button type="button" onClick={() => setMobileContactOpen(!mobileContactOpen)} className={`w-full text-left block py-2 rounded-md text-base font-medium ${isActive('/contact') || isActive('/global-hotline') ? 'text-mainBlue font-semibold' : 'text-gray-500'} hover:text-mainBlue`}>
+                {t("contact")}
+              </button>
+              <ul className={`${mobileContactOpen ? 'block' : 'hidden'} pl-4 mt-1 space-y-1`}>
+                <li>
+                  <Link href={buildHref('/contact')} className={`block py-2 rounded-md text-base font-medium ${isActive('/contact') ? 'text-mainBlue font-semibold' : 'text-gray-500'} hover:text-mainBlue`} onClick={() => setOpen(false)}>
+                    {t("contact")}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={buildHref('/global-hotline')} className={`block py-2 rounded-md text-base font-medium ${isActive('/global-hotline') ? 'text-mainBlue font-semibold' : 'text-gray-500'} hover:text-mainBlue`} onClick={() => setOpen(false)}>
+                    {t("global-hotline")}
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </li>
           <li>
             <Link href={buildHref('/product-service')} className={`block py-2 rounded-md text-base font-medium ${isActive('/product-service') ? 'text-mainBlue font-semibold' : 'text-gray-500'} hover:text-mainBlue`} onClick={() => setOpen(false)}>
@@ -102,7 +162,7 @@ const Navbar: React.FC = () => {
             </Link>
           </li>
         </ul>
-        <div className="pt-2 pb-3 flex items-center justify-center">
+        <div className="pt-2 pb-3 flex items-center justify-center border border-gray-200 rounded-full">
           <div className="relative">
             <LanguageSwitcher />
           </div>
