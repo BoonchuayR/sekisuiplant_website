@@ -8,6 +8,22 @@ import getLocaleFromPath from "@/i18n/utils";
 export default function LanguageSwitcher({ className = "" }: { className?: string }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
+  // Delay (ms) before hiding the language dropdown to avoid accidental close
+  const DROPDOWN_HIDE_DELAY = 400;
+  const hideTimerRef = useRef<number | null>(null);
+  const clearHideTimer = () => {
+    if (hideTimerRef.current) {
+      window.clearTimeout(hideTimerRef.current);
+      hideTimerRef.current = null;
+    }
+  };
+  const startHideTimer = () => {
+    clearHideTimer();
+    hideTimerRef.current = window.setTimeout(() => {
+      setOpen(false);
+      hideTimerRef.current = null;
+    }, DROPDOWN_HIDE_DELAY);
+  };
   const pathname = usePathname() ?? "/";
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -22,7 +38,10 @@ export default function LanguageSwitcher({ className = "" }: { className?: strin
       }
     }
     if (open) document.addEventListener("click", onDocClick);
-    return () => document.removeEventListener("click", onDocClick);
+    return () => {
+      document.removeEventListener("click", onDocClick);
+      clearHideTimer();
+    };
   }, [open]);
 
   const changeLocale = (locale: Locale) => {
@@ -41,10 +60,21 @@ export default function LanguageSwitcher({ className = "" }: { className?: strin
   };
 
   return (
-    <div className={className} ref={ref}>
+    <div
+      className={className}
+      ref={ref}
+      onMouseEnter={() => {
+        clearHideTimer();
+        setOpen(true);
+      }}
+      onMouseLeave={() => startHideTimer()}
+    >
       <button
         type="button"
-        onClick={() => setOpen((s) => !s)}
+        onClick={() => {
+          clearHideTimer();
+          setOpen((s) => !s);
+        }}
         aria-haspopup="menu"
         aria-expanded={open}
         className="p-0 rounded-full hover:bg-gray-100"
@@ -56,7 +86,11 @@ export default function LanguageSwitcher({ className = "" }: { className?: strin
         />
       </button>
       {open && (
-        <div className="absolute right-0 mt-2 w-32 bg-white rounded shadow-lg z-50">
+        <div
+          className="absolute right-0 mt-2 w-32 bg-white rounded shadow-lg z-50"
+          onMouseEnter={() => clearHideTimer()}
+          onMouseLeave={() => startHideTimer()}
+        >
           {LOCALES.map((l) => (
             <button
               key={l.code}

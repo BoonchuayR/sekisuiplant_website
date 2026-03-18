@@ -41,6 +41,23 @@ const Navbar: React.FC = () => {
 
   const contactRef = useRef<HTMLLIElement | null>(null);
 
+  // Delay (ms) before hiding the desktop dropdown to avoid accidental close
+  const DROPDOWN_HIDE_DELAY = 400;
+  const hideTimerRef = useRef<number | null>(null);
+  const clearHideTimer = () => {
+    if (hideTimerRef.current) {
+      window.clearTimeout(hideTimerRef.current);
+      hideTimerRef.current = null;
+    }
+  };
+  const startHideTimer = () => {
+    clearHideTimer();
+    hideTimerRef.current = window.setTimeout(() => {
+      setDesktopContactOpen(false);
+      hideTimerRef.current = null;
+    }, DROPDOWN_HIDE_DELAY);
+  };
+
   useEffect(() => {
     const handleOutside = (e: MouseEvent) => {
       if (contactRef.current && !contactRef.current.contains(e.target as Node)) {
@@ -57,6 +74,8 @@ const Navbar: React.FC = () => {
     return () => {
       document.removeEventListener("mousedown", handleOutside);
       document.removeEventListener("keydown", handleKey);
+      // clear any pending hide timer on cleanup
+      clearHideTimer();
     };
   }, []);
 
@@ -76,10 +95,21 @@ const Navbar: React.FC = () => {
             <li>
               <Link href={buildHref('/about-us')} className={`${isActive('/about-us') ? 'text-mainBlue' : 'text-gray-500'} hover:text-mainBlue`}>{t("about")}</Link>
             </li>
-            <li className="relative group" ref={contactRef}>
+            <li
+              className="relative"
+              ref={contactRef}
+              onMouseEnter={() => {
+                clearHideTimer();
+                setDesktopContactOpen(true);
+              }}
+              onMouseLeave={() => startHideTimer()}
+            >
               <button
                 type="button"
-                onClick={() => setDesktopContactOpen((s) => !s)}
+                onClick={() => {
+                  clearHideTimer();
+                  setDesktopContactOpen((s) => !s);
+                }}
                 aria-expanded={desktopContactOpen}
                 aria-haspopup="true"
                 className={`inline-flex items-center gap-2 ${isActive('/contact') || isActive('/global-hotline') ? 'text-mainBlue' : 'text-gray-500'} hover:text-mainBlue`}
@@ -87,12 +117,17 @@ const Navbar: React.FC = () => {
                 {t("contact")}
                 <span className="text-xs">▾</span>
               </button>
-              <ul style={{ minWidth: '12rem', width: '12rem' }} className={`absolute left-0 mt-2 w-80 min-w-[20rem] bg-white rounded-md shadow-sm z-50 ${desktopContactOpen ? 'block' : 'hidden'} group-hover:block`}>
+              <ul
+                style={{ minWidth: '12rem', width: '12rem' }}
+                className={`absolute left-0 mt-2 w-80 min-w-[20rem] bg-white rounded-md shadow-sm z-50 ${desktopContactOpen ? 'block' : 'hidden'}`}
+                onMouseEnter={() => clearHideTimer()}
+                onMouseLeave={() => startHideTimer()}
+              >
                 <li>
-                  <Link href={buildHref('/contact')} onClick={() => setDesktopContactOpen(false)} className={`block px-4 py-2 text-sm hover:bg-gray-100 hover:text-mainBlue border-b border-gray-100 ${isActive('/contact') ? 'text-mainBlue font-semibold' : 'text-gray-700'} hover:bg-gray-50`}>{t("contact")}</Link>
+                  <Link href={buildHref('/contact')} onClick={() => setDesktopContactOpen(false)} className={`block px-4 py-2 text-sm hover:bg-gray-100 hover:text-mainBlue border-b border-gray-100 hover:rounded-t-md ${isActive('/contact') ? 'text-mainBlue font-semibold' : 'text-gray-700'} hover:bg-gray-50`}>{t("contact")}</Link>
                 </li>
                 <li>
-                  <Link href={buildHref('/global-hotline')} onClick={() => setDesktopContactOpen(false)} className={`block px-4 py-2 text-sm hover:bg-gray-100 hover:text-mainBlue ${isActive('/global-hotline') ? 'text-mainBlue font-semibold' : 'text-gray-700'} hover:bg-gray-50`}>{t("global-hotline")}</Link>
+                  <Link href={buildHref('/global-hotline')} onClick={() => setDesktopContactOpen(false)} className={`block px-4 py-2 text-sm hover:bg-gray-100 hover:text-mainBlue hover:rounded-b-md ${isActive('/global-hotline') ? 'text-mainBlue font-semibold' : 'text-gray-700'} hover:bg-gray-50`}>{t("global-hotline")}</Link>
                 </li>
               </ul>
             </li>
